@@ -1,22 +1,75 @@
+<body>
 <nav>  
-<li class="navClass"><a href=""> Stuff </a></li>
-      <li class="navClass"><a href=""> Stuff </a></li>
-      <li class="navClass"><a href=""> Stuff </a></li>
-   <center>
+<li class="navClass"><a href=""> main </a></li>
+      <li class="navClass"><a href="#competetors"> competitors </a></li>
+      <li class="navClass"><a href="#h6"> how to get there </a></li>
+   
+     
+       <center>
     <h1>
      dropBeat stadium
     </h1> 
-  </center>
+     </center>
+ 
   </nav> 
 <div class="wrapper">
   <div class="box a"><center>contact: 111-111-1111</center></div>
   <div class="box b"><center>April 1st, 2020</center></div>
-  <div class="box c"><center>C</center></div>
+  <div class="box c"><center>MUSIC TIME!!!</center></div>
   <div class="box d"><center>Logo</center></div>
-  
 </div>
-
+<br></br><br></br><br></br><br></br><br></br><div class="things" id ="competetors"> </div><br></br></div><br></br><br></br>
+<div class="things" >
+  <div class="boxs header" >possibly the winner last time: </div>
+  <div class="boxs sidebar"> <a href="https://www.youtube.com/watch?v=NBFuzr_GnqQ"><center> theme of really cool bird <br>(click it)</br></center> </a> </div>
+  <div class="boxs content"> </div>
+  <div class="overlay"><table>
+    <center>
+    <tr>
+        
+      <th>  </th>
+        <th> competitors </th>
+        
+        <th>  this  </th>
+        <th> round </th>
+      </tr>
+      <td> <ol>people playing the music </ol> </td>
+      <td> people </td>
+      <td> the press </td>
+      <td> someone </td>
+      <tr> 
+      <td> <ol>the music being played </ol></td>
+      <td> attack of the bread </td> 
+        <td>poisoned food </td>
+        <td> more stuff and things </td>
+      </tr>
+      <tr> 
+        <td> <ol>time</ol> </td>
+        <td> 25:25 </td>
+        <td> 25:50 </td>
+        <td> 25:75 </td>
+      </tr>
+    
+    </table></center></div>
+</div>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><div class="things" id ="h6"> </div>
+  <center>
+    <h6> how to get there:  <h6>
+    <li> talk to your parents about it  </li>
+      <li> go to an insane asylum</li>
+      <li> go to sleep </li>
+      <li> go with the guy trying to give you candy in his car</li>
+      <li> the hotel to stay at is at "the middle of nowhere"
+    
+    <center>
+  </body>
+  
+  
+  
+  
+  
 <style>
+
 
 
 nav {
@@ -26,6 +79,7 @@ nav {
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 100;
 }
 a {
   text-decoration: none;
@@ -42,6 +96,7 @@ a {
 }
 body {
   margin: 100px;
+  background-color: cyan;
 }
 
 .wrapper {
@@ -51,13 +106,12 @@ body {
   background-color: #fff;
   color: #444;
 }
-
 .box {
   background-color: #444;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 50px;
   padding: 100px;
-  font-size: 150%;
+  font-size: 350%;
 }
 
 .a {
@@ -83,6 +137,77 @@ grid-column-start: 1;
 grid-column-end: 2;
 grid-row-start: 1;
 grid-row-end: 2;
+}
+
+.sidebar {
+grid-area: sidebar;
+}
+
+.content {
+grid-area: content;
+}
+
+.header {
+grid-area: header;
+}
+
+.boxs {
+background-color: #444;
+color: #fff;
+border-radius: 5px;
+padding: 20px;
+font-size: 150%;
+
+}
+
+.things {
+display: grid;
+    grid-gap: 10px;
+grid-template-columns: 20% 60%;
+grid-template-areas:
+    "header  header  header" 
+"sidebar content content";
+background-color: #fff;
+color: #444;
+}
+
+
+
+.header {
+background-color: #999;
+}
+
+.overlay {
+background-color: lightblue;
+z-index: 10;
+grid-column: content-start / content-end;
+grid-row: header-start / content-end;
+}
+table, td {
+  border: 1px solid black;
+}
+table {
+  border: gray;
+   border-collapse: collapse;
+  background-color: white;
+    width: 100%
+}
+ol{
+  background-color: lightblue;
+}
+th {
+  background-color: teal;
+}
+h6{
+  background-color: lightgreen;
+  font-size: 500%;
+}
+h8{
+  color: green;
+}
+h1{
+  color: black;
+  margin-left: 20%
 }
 
 
