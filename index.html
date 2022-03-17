@@ -7,15 +7,16 @@
   </head> 
 <body>
     <nav>
-   <li><a href="index.html"> home page </a></li>
-        <li><a href="MoreBreadStuff.html"> more bread stuff </a></li>
-        <li><a href="convince/Pineapple Pizza.html"> Pineapple Pizza </a></li>
-        <li><a href="bread store/The Bread store.html"> Bread store </a></li>
-        <li><a href="Event/Event page.html"> MUSIC FALSENESS </a></li>
+   <li class="navClass"><a href="index.html"> home page </a></li>
+        <li class="navClass"><a href="MoreBreadStuff.html"> more bread stuff </a></li>
+        <li class="navClass"><a href="convince/Pineapple Pizza.html"> Pineapple Pizza </a></li>
+        <li class="navClass"><a href="bread store/The Bread store.html"> Bread store </a></li>
+        <li class="navClass"><a href="Event/Event page.html"> MUSIC FALSENESS </a></li>
 </nav>
+  <center>
     <p> words that exist </p>
     <img src ="MEEEEEE.jpg"> 
-    
+  </center>
     
     
     </body>
@@ -24,3 +25,22 @@
 
 
 </html>
+<style>
+    nav {
+  list-style-type: none;
+  position: fixed;
+  background-color: green;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.navClass:hover {
+  background-color: gold;
+}
+.navClass {
+  display: inline;
+  float: right;
+  padding: 1%;
+}
+</style>
