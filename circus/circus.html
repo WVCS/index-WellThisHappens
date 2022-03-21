@@ -1,0 +1,193 @@
+<body>
+<nav>  
+<li class="navClass"><a href=""> stuff1 </a></li>
+      <li class="navClass"><a href="#competetors"> stuff2  </a></li>
+      <li class="navClass"><a href="#h6">  stuff3 </a></li>
+   
+     
+       <center>
+    <h1>
+     Circus clown
+    </h1> 
+     </center>
+ 
+  </nav> 
+<div class="wrapper">
+  <div class="box a"><center><b>13500 Wolverine Way</b></center></div>
+  <div class="box b"><center><b></b></center></div>
+  <div class="box c"><center><b></b></center></div>
+  <div class="box d"><center><b></b></center></div>
+</div>
+<br></br><br></br><br></br><br></br><br></br><br></br><div class="things" id ="competetors"> </div><br></br></div><br></br><br></br>
+<div class="stuff" >
+  </div>
+</div>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><div class="things" id ="h6"> </div>
+  <center>
+    <h6 class="existence"> h <h6>
+    <li class="existence"> t  </li>
+      <li class="existence"> g</li>
+      <li class="existence"> g </li>
+      <li class="existence"> g</li>
+      <li class="existence"> t </li>
+    
+    <center>
+  </body>
+      
+      <style>
+        nav {
+  list-style-type: none;
+  position: fixed;
+  background-color: teal;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+a {
+  text-decoration: none;
+  color: #FF570A;
+  font-size: 120%;
+}
+b {
+  color: black;
+}
+.navClass:hover {
+  background-color: gold;
+}
+.navClass {
+  display: inline;
+  float: right;
+  padding: 1%;
+}
+body {
+  margin: 100px;
+  background-color: black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 50px;
+  background-color: black;
+  color: black;
+}
+.box {
+  background-color: lightgreen;
+  color: #fff;
+  border-radius: 50px;
+  padding: 100px;
+  text-color:blue;
+  font-size: 300%;
+}
+
+.a {
+grid-column-start: 2;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+.b {
+grid-column-start: 2;
+grid-column-end: 2;
+grid-row-start: 2;
+grid-row-end: 2;
+}
+.c {
+grid-column-start: 1;
+grid-column-end: 1;
+grid-row-start: 2;
+grid-row-end: 2;
+}
+.d {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+
+.sidebar {
+grid-area: sidebar;
+}
+
+.content {
+grid-area: content;
+}
+
+.header {
+grid-area: header;
+}
+
+.boxs {
+background-color: #444;
+color: #fff;
+border-radius: 5px;
+padding: 20px;
+font-size: 150%;
+
+}
+
+.stuff {
+display: grid;
+    grid-gap: 10px;
+grid-template-columns: 20% 60%;
+grid-template-areas:
+    "header  header  header" 
+"sidebar content content";
+background-color: #fff;
+color: #444;
+}
+
+
+
+.header {
+background-color: #999;
+}
+
+.overlay {
+background-color: lightblue;
+z-index: 10;
+grid-column: content-start / content-end;
+grid-row: header-start / content-end;
+}
+table, td {
+  border: 1px solid black;
+}
+table {
+  border: gray;
+   border-collapse: collapse;
+  background-color: white;
+    width: 100%
+}
+ol {
+  background-color: lightblue;
+}
+th {
+  background-color: teal;
+}
+h6{
+  background-color: lightgreen;
+  font-size: 500%;
+}
+h8{
+  color: green;
+}
+h1{
+  color: black;
+  margin-left: 20%
+}
+ @media only screen and (max-width: 1200px)  {
+   .existence{
+    background-color: blue;
+  color: white;
+     font-size: 40px;
+   }
+   .box {
+     font-size: 200%
+   }
+   .boxs{
+     font-size: 100%;
+   }
+}
+
+      </style>
