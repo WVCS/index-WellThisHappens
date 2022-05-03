@@ -1,0 +1,165 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div ID="header">
+    
+    <div ID="nav-container">
+  <nav ID="navbar">
+    
+    <li>
+      
+    </li>
+    <li class="navLink"><a href="../index.html"> Home </a></li>
+    <li>
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"> Gladitorial fight</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#main">Main</a>
+    <a href="#dirt2"></a>
+    <a href="#dirt3"></a>
+    <a href="#tools"></a>
+  </div>
+</div>
+    </li>
+    </nav>
+    </div>
+    <div id="scroll">for scrolling</div>
+    
+    
+    
+    
+    
+</body>
+  <script>
+      // Initial state
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+    document.getElementById("navbar").style.animation = 'showNav 1.5s linear';
+  
+	else
+		document.getElementById("navbar").style.animation = 'hideNav 1.5s linear';
+   document.getElementById("navbar").style.animationFillMode = 'forwards';
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
+  </script>
+</html>
+  
+  
+  <style>
+    
+
+#navbar{
+  background-image: url("https://images.unsplash.com/photo-1597113366853-fea190b6cd82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8d29vZCUyMGJvYXJkfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+  list-style-type: none;
+  background-color: #F19A3E;
+  width: 100%;
+  
+  transform-origin: top center;
+  animation: none;
+}
+
+#nav-container{
+  perspective: 1000px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+@keyframes hideNav{
+  from{transform: rotateX(0deg);}
+  to{transform: rotateX(-180deg);}
+}
+
+@keyframes showNav{
+  from{transform: rotateX(-180deg);}
+  to{transform: rotateX(0deg);}
+}
+
+.navLink {
+  display: inline;
+  float: left;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-family: "KP9", sans-serif;
+}
+
+.navLink:hover {
+  background-color: red;
+  transition: 0.5s;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  font-family: "KP9", sans-serif;
+  font-weight: 1;
+  background-color: #F19A3E;
+  color: white;
+  padding: 20px;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: orange;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: darkorange}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+#bannerImg{
+  height: 70px;
+  padding-right: 5px;
+  
+  float: right;
+}
+
+#scroll{
+  height: 1000px;
+}
+  </style>
