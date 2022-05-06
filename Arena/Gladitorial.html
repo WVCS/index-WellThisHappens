@@ -54,7 +54,12 @@ window.addEventListener('scroll', function(){
 });
   </script>
   <div class="wrapper">
-  <div class="box a">A</div>
+  <div class="box a"> <div class="container">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdv318thpWYnm198gAQVIjMPW0qjlkMkCUmEij0ulxPcmXr2P40pIAtKEsVQqTYEGDHQ:https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631_960_720.jpg&usqp=CAU" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">join in on a death match by signing up at the door. the winner gets a dollar! To watch the death matches buy tickets at the door beforehand</div>
+  </div>
+</div></div>
   <div class="box b">B</div>
  
     
@@ -192,7 +197,7 @@ body {
     background-color: #444;
     color: #fff;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     font-size: 150%;
 
   }
@@ -211,7 +216,50 @@ body {
     grid-column: col 2 / span 1;
     grid-row: row;
   }
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
 
+/* Make the image to responsive */
+.image {
+  width: 100%;
+  
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631_960_720.jpg");
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.container:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+  background-image: url("https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631_960_720.jpg");
+   
+  color: yellow;
+  font-size: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
   
 /*#scroll{
   height: 1000px;
