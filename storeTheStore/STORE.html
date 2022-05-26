@@ -1,1 +1,136 @@
+<div id ="myContainer">
+<div id ="myAnimation"><div id = "ease"><img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7Ios533TmSxNodi_BGn0VgmRyImrAE3Xcmeb7w5WVZWiEucIbqes8Z-hh7iyP2AhftM:https://previews.123rf.com/images/_fla/_fla1205/_fla120500230/13756213-shopping-cart-full.jpg&usqp=CAU"> </img></div> </div>  </div>
+<img id="cashReg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlnehD0ULX16JslVOt1Oh64sXcaW8TmTtwieNvbs_eO86pCIhQJV-EZihWHossjosTXxE:https://previews.123rf.com/images/nordfox/nordfox1702/nordfox170200035/72104239-kassenschalter.jpg&usqp=CAU"> </img>
 
+<body>
+<center>
+<table>
+    
+    <tr>
+        
+      <th> the </th>
+        <th> prices </th>
+        
+        <th>  are </th>
+       <th> fake <th>
+      </tr>
+      <td> <ol> vegetables </ol> </td>
+      <td> <ol> prices<ol> </td>
+      <td> <ol> fruits<ol> </td>
+      <td> <ol> prices<ol> </td>
+     
+      <tr> 
+      <td> <button onclick="myMove()"> lettuce </button> </td>
+      <td> 3.99$ </td> 
+        <td> <button onclick="myMove()"> apple </button> </td>
+        <td> 1.99$ </td>
+        
+      </tr>
+      <tr> 
+        <td> <button onclick="myMove()"> avacado</button> </td>
+        <td>  .99$ </td>
+        <td> <button onclick="myMove()"> pineapple</button></td>
+        <td>  6.99$ </td>
+        
+      </tr>
+      <tr> 
+        <td> <button onclick="myMove()"> carrots</button> </td>
+        <td> 2.99$ </td>
+        <td> <button onclick="myMove()"> pomegranite</button> </td>
+        <td> 4.99$ </td>
+        
+      </tr>
+      <tr> 
+        <td> <button onclick="myMove()"> cabbages</button> </td>
+        <td> 2.99$ </td>
+        <td> <button onclick="myMove()"> strawberries</button> </td>
+        <td> .49$ </td>
+        
+      </tr>
+         <tr> 
+        <td> <button onclick="myMove()"> artichoke </button> </td>
+        <td> 3.99$ </td>
+        <td> <button onclick="myMove()"> bananas</button> </td>
+        <td> 1.99$ </td>
+        
+      </tr>
+    
+    </table></center>
+        </body>
+        <style>
+          div{
+  
+  height: 50px;
+  width: 100px;
+  position:relative;
+  
+}
+img{
+  height; 100%
+}
+#cashReg{
+  
+}
+
+@keyframes across {
+  from {left:0px;}
+  to {left: 130%;}
+}
+#ease {animation-timing-function: ease}
+table, td {
+  border: 1px solid black;
+}
+table {
+  border: gray;
+   border-collapse: collapse;
+  background-color: white;
+    width: 100%
+}
+ol {
+  background-color: lightblue;
+}
+th {
+  background-color: teal;
+}
+body{
+  background-image: url("Store shelf.png");
+}
+button{
+  
+}
+
+        </style>
+        <script>
+          var id = null;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 4000) {
+      clearInterval(id);
+    } else if(pos <200){
+      pos+= 6;  
+      elem.style.left = pos + 'px'; 
+    } else if(pos <400){
+      pos+= 8;  
+      elem.style.left = pos + 'px'; 
+    } else if(pos <600){
+      pos+= 10;  
+      elem.style.left = pos + 'px'; 
+    }else if(pos <800){
+      pos+= 11;  
+      elem.style.left = pos + 'px'; 
+    }else if(pos <1000){
+      pos+= 10;  
+      elem.style.left = pos + 'px'; 
+    } else if(pos > 1900) {
+      elem.style.left = pos + 'px'; 
+    } else  {
+      pos += 7;
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+        </script>
