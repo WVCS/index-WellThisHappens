@@ -1,15 +1,13 @@
-  
-
-
-  
-
 
   <html lang="en">
 <head>
-  <li><a href="../index.html"> home page </a></li>
-        <li><a href="../MoreBreadStuff.html"> more bread stuff </a></li>
-        <li><a href="../convince/Pineapple Pizza.html">Pineapple Pizza </a></li>
+  <nav>
+  <li class="navClass"><a href="../index.html"> home page </a></li>
+        <li class="navClass"><a href="../MoreBreadStuff.html"> more bread stuff </a></li>
+        <li class="navClass"><a href="../convince/Pineapple Pizza.html">Pineapple Pizza </a></li>
 </nav>
+  
+  
     <center>
     <h1>
      The Pineapple Can Exist on the Pizza
@@ -20,10 +18,11 @@
   <title>PINEAPPLE CAN BE ON PIZZA</title>
 </head>
 <body>
- 
-    <img src ="the pineapple pictures.jpg" > 
-    <br> 
-  <h3>
+ <div class="wrapper">
+  <div class="box a"><iframe width="640" height="360" src="https://www.youtube.com/embed/8WgzimriK6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  
+  <div class="box d"><img src ="the pineapple pictures.jpg" > </img></div>
+  <div class="box e"><h3>
     some people do not think pineapple should be on pizza because it is sweet
   </h3>
   <h4>
@@ -39,10 +38,14 @@
   
   <br>
   <h6>
-    if you want to see how to make pizza dough and possibly make a hawaiian pizza look at the link below
-  </h6>
+    if you want to see how to make pizza dough and possibly make a hawaiian pizza look at the link above
+  </h6></div>
+</div>
+    
+    <br> 
+  
   <br>
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/8WgzimriK6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
   </center>
 </body>
   
@@ -53,7 +56,74 @@
 
 
 
+
 <style>
+nav {
+  list-style-type: none;
+  position: fixed;
+  background-color: green;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+a {
+  text-decoration: none;
+  color: #FF570A;
+  font-size: 120%;
+  background-color: green;
+  color: red;
+  text-shadow: 2px 2px 5px silver;
+}
+.navClass:hover {
+  background-color: gold;
+}
+.navClass {
+  display: inline;
+  float: right;
+  padding: 1%;
+}
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 20% 10;
+  grid-gap: 10px;
+  background-color: orange;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.a {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .d {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .e {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+
+
 li{
    background-color: #420217;
   color: #E5E9EC;
@@ -61,11 +131,7 @@ li{
 img{
   background-color: green;
 }
-a{
-  background-color: green;
-  color: red;
-  text-shadow: 2px 2px 5px silver;
-}
+
 body{
   background-color: orange;
 }
@@ -73,6 +139,7 @@ img{
   background-color: #420217;
 }
 h1{
+  margin-top: 100px;
   background-color: yellow ;
   text-decoration: overline;
   
